@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build Crysis VR
-    runs-on: windows-2022
+    runs-on: windows-2019
 
     permissions: write-all
 
@@ -21,7 +21,6 @@ jobs:
         uses: microsoft/setup-msbuild@v2
         with:
           msbuild-architecture: x64
-          vs-version: '[17.12]'
 
       - name: Configure build
         shell: bash
