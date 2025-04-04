@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     name: Build Crysis VR
-    runs-on: windows-2019
+    runs-on: windows-2022
 
     permissions: write-all
 
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v2
+        uses: microsoft/setup-msbuild@v1.1
         with:
           msbuild-architecture: x64
 
