@@ -89,9 +89,11 @@ CPlayerInput::CPlayerInput( CPlayer * pPlayer ) :
 		ADD_HANDLER(v_rotateyaw, OnActionVRotateYaw); // needed so player can shake unfreeze while in a vehicle
 		ADD_HANDLER(v_rotatepitch, OnActionVRotatePitch);
 
+		ADD_HANDLER(xi_v_rotateyaw, OnActionXIRotateYaw);
 		ADD_HANDLER(xi_rotateyaw, OnActionXIRotateYaw);
 		ADD_HANDLER(xi_rotatepitch, OnActionXIRotatePitch);
 
+		ADD_HANDLER(xi_v_rotatepitch, OnActionXIRotatePitch);
 		ADD_HANDLER(xi_movex, OnActionXIMoveX);
 		ADD_HANDLER(xi_movey, OnActionXIMoveY);
 		ADD_HANDLER(xi_disconnect, OnActionXIDisconnect);

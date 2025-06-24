@@ -634,9 +634,17 @@ void OpenXRInput::UpdatePlayerMovement()
 
 	getInfo.action = m_moveX;
 	xrGetActionStateFloat(m_session, &getInfo, &state);
+	if (state.isActive)
+	{
+		input->OnAction(inVehicle ? g_pGameActions->xi_v_movex : g_pGameActions->xi_movex, eAAM_Always, state.currentState);
+	}
 
 	getInfo.action = m_moveY;
 	xrGetActionStateFloat(m_session, &getInfo, &state);
+	if (state.isActive)
+	{
+		input->OnAction(inVehicle ? g_pGameActions->xi_v_movey : g_pGameActions->xi_movey, eAAM_Always, state.currentState);
+	}
 
 	getInfo.action = m_jumpCrouch;
 	xrGetActionStateFloat(m_session, &getInfo, &state);
@@ -650,6 +658,12 @@ void OpenXRInput::UpdatePlayerMovement()
 	xrGetActionStateFloat(m_session, &getInfo, &state);
 	float pitch = state.isActive ? state.currentState : 0;
 
+	if (inVehicle)
+	{
+		input->OnAction(g_pGameActions->xi_v_rotatepitch, eAAM_Always, pitch * (g_pGameCVars->vr_vehicle_invert_y ? -1 : 1));
+		input->OnAction(g_pGameActions->xi_v_rotateyaw, eAAM_Always, yaw);
+		return;
+	}
 
 	if (inHud || usingMountedGun || (rendering2D && !isZoomed))
 	{
