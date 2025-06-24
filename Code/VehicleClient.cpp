@@ -63,6 +63,11 @@ bool CVehicleClient::Init()
   m_actionNameIds.insert(TActionNameIdMap::value_type("v_rollleft", eVAI_RollLeft));
   m_actionNameIds.insert(TActionNameIdMap::value_type("v_rollright", eVAI_RollRight));
 
+	m_actionNameIds.insert(TActionNameIdMap::value_type("xi_v_rotateyaw", eVAI_XIRotateYaw));
+	m_actionNameIds.insert(TActionNameIdMap::value_type("xi_v_rotatepitch", eVAI_XIRotatePitch));
+	m_actionNameIds.insert(TActionNameIdMap::value_type("xi_v_movey", eVAI_XIMoveY));
+	m_actionNameIds.insert(TActionNameIdMap::value_type("xi_v_movex", eVAI_XIMoveX));
+
   m_actionNameIds.insert(TActionNameIdMap::value_type("v_pitchup", eVAI_PitchUp));
   m_actionNameIds.insert(TActionNameIdMap::value_type("v_pitchdown", eVAI_PitchDown));
 
