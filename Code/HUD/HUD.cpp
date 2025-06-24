@@ -2055,7 +2055,7 @@ bool CHUD::OnAction(const ActionId& action, int activationMode, float value)
 	}
 
 
-	else if(action == rGameActions.xi_rotatepitch || action == rGameActions.xi_v_rotatepitch)
+	else if(action == rGameActions.xi_rotatepitch)
 	{
 		if(m_iCursorVisibilityCounter)
 		{
@@ -2068,7 +2068,7 @@ bool CHUD::OnAction(const ActionId& action, int activationMode, float value)
 		}
 		filterOut = false;
 	}
-	else if(action == rGameActions.xi_rotateyaw || action == rGameActions.xi_v_rotateyaw)
+	else if(action == rGameActions.xi_rotateyaw)
 	{
 		if(m_iCursorVisibilityCounter)
 		{

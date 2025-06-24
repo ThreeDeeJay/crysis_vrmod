@@ -209,8 +209,6 @@ void CGameActions::CreateFilterFreezeTime()
 	m_pFilterFreezeTime->Filter(xi_binoculars);
 	m_pFilterFreezeTime->Filter(xi_rotateyaw);
 	m_pFilterFreezeTime->Filter(xi_rotatepitch);
-	m_pFilterFreezeTime->Filter(xi_v_rotateyaw);
-	m_pFilterFreezeTime->Filter(xi_v_rotatepitch);
 
 	// HUD
 	m_pFilterFreezeTime->Filter(hud_nanosuit_nextitem);
